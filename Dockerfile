@@ -1,12 +1,8 @@
-FROM python:3.10.8-slim-buster
-
-# Fix Buster repositories (moved to archive)
-RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
-    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
-    sed -i '/buster-updates/d' /etc/apt/sources.list
+FROM python:3.10-slim-bullseye
 
 # Install system dependencies
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y git && \
     rm -rf /var/lib/apt/lists/*
 
