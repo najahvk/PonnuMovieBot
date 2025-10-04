@@ -38,7 +38,7 @@ MOVI_CHNL = environ.get('MOVI_CHNL', 'https://t.me/PonnuMovie')
 PICZ = (environ.get('PICZ', 'https://i.ibb.co/tT15Txc9/IMG-20250930-WA0064.jpg https://i.ibb.co/mVhRWSF0/IMG-20250930-WA0067.jpg https://i.ibb.co/d4bhZ8MR/IMG-20250930-WA0066.jpg https://i.ibb.co/jPqkPHxj/IMG-20250930-WA0065.jpg')).split()
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002596835060'))
-URL = environ.get('URL', 'https://render.com/botbsbsbbshbs/')
+URL = environ.get('URL', 'https://app.koyeb.com')
 
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', False)
