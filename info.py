@@ -25,8 +25,8 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 USERNAME = environ.get('USERNAME', 'https://telegram.me/ponnuXmol')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002596835060'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003029942992').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://proerotic1:proerotic1@cluster0.5l018xk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://proerotic2:proerotic2@cluster0.1tp27v1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://najahvk6_db_user:najahvk6_db_user@cluster000.zhdd0yf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster000")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://najahvk6_db_user1:najahvk6_db_user1@cluster0000.ihzvxpi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0000")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TheNuwSav3Jdj')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002596835060'))
