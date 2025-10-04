@@ -25,8 +25,8 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 USERNAME = environ.get('USERNAME', 'https://telegram.me/ponnuXmol')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002596835060'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003029942992').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://najahvk6_db_user:najahvk6_db_user@cluster000.zhdd0yf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster000")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://najahvk6_db_user1:najahvk6_db_user1@cluster0000.ihzvxpi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0000")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://najahvk6_db_user1:najahvk6_db_user1@cluster0000.ihzvxpi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0000")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://najahvk6_db_user2:najahvk6_db_user2@cluster0000.oy7impi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0000")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TheNuwSav3Jdj')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002596835060'))
@@ -38,7 +38,7 @@ MOVI_CHNL = environ.get('MOVI_CHNL', 'https://t.me/PonnuMovie')
 PICZ = (environ.get('PICZ', 'https://i.ibb.co/tT15Txc9/IMG-20250930-WA0064.jpg https://i.ibb.co/mVhRWSF0/IMG-20250930-WA0067.jpg https://i.ibb.co/d4bhZ8MR/IMG-20250930-WA0066.jpg https://i.ibb.co/jPqkPHxj/IMG-20250930-WA0065.jpg')).split()
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002596835060'))
-URL = environ.get('URL', 'https://heroku.com/botbsbsbbshbs/')
+URL = environ.get('URL', 'https://render.com/botbsbsbbshbs/')
 
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', False)
