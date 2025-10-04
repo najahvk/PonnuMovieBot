@@ -1,19 +1,24 @@
 FROM python:3.10.8-slim-buster
 
-# Update and install dependencies
-RUN apt update && apt upgrade -y && apt install -y git
+# Fix Buster repositories (moved to archive)
+RUN sed -i 's/deb.debian.org/archive.debian.org/g' /etc/apt/sources.list && \
+    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
+    sed -i '/buster-updates/d' /etc/apt/sources.list
 
-# Set working directory first
+# Install system dependencies
+RUN apt-get update && \
+    apt-get install -y git && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set working directory
 WORKDIR /FILTER-BOT
 
-# Copy requirements file
+# Copy and install Python dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Install Python dependencies
-RUN pip3 install --no-cache-dir --upgrade pip && \
-    pip3 install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application
+# Copy application files
 COPY . .
 
 # Run the bot
