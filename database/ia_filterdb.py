@@ -20,7 +20,7 @@ class Media(Document):
     file_name = fields.StrField(required=True)
     file_size = fields.IntField(required=True)
     mime_type = fields.StrField(allow_none=True)
-    #caption = fields.StrField(allow_none=True)
+    caption = fields.StrField(allow_none=True)
     file_type = fields.StrField(allow_none=True)
 
     class Meta:
@@ -44,7 +44,8 @@ async def save_file(media):
             file_name=file_name,
             file_size=media.file_size,
             mime_type=media.mime_type,
-            #caption=media.caption.html if media.caption else None,
+            #caption=None,
+            caption=media.caption.html if media.caption else None,
             file_type=media.mime_type.split('/')[0]
         )
     except ValidationError:
@@ -148,4 +149,5 @@ def unpack_new_file_id(new_file_id):
     )
     file_ref = encode_file_ref(decoded.file_reference)
     return file_id, file_ref
+
     
