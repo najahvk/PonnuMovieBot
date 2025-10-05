@@ -75,8 +75,6 @@ async def start(client: Client, message):
         buttons = [[
             InlineKeyboardButton("• Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ •", url=MOVI_CHNL),
             InlineKeyboardButton("• Mᴏᴠɪᴇ Gʀᴏᴜᴘ •", url=MOVI_GRP)
-        ],[
-            InlineKeyboardButton("• Bᴏᴛ Oᴡɴᴇʀ •", url=OWNER_LINK)
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
