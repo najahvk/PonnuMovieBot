@@ -22,7 +22,7 @@ API_ID = int(environ.get('API_ID', '22369181'))
 API_HASH = environ.get('API_HASH', '7dad13f46bdcd58805ce9f9ebb13c8ee')
 BOT_TOKEN = environ.get('BOT_TOKEN', '8101559551:AAGW40LT9kFcdQtVhIyy2WbfUATKDjdrCXA')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1769132732 6861922941 7457122085 7033932663').split()]
-USERNAME = environ.get('USERNAME', 'https://telegram.me/ponnuXmol')
+USERNAME = environ.get('USERNAME', 'https://telegram.me/itz_pabloescobar')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002596835060'))
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003029942992').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://najahvk6_db_user1:najahvk6_db_user1@cluster0000.ihzvxpi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0000")
@@ -32,7 +32,6 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TheNuwSav3Jdj')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002596835060'))
 QR_CODE = environ.get('QR_CODE', 'https://')
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
-OWNER_LINK = environ.get('OWNER_LINK', 'https://telegram.me/ponnuXmol')
 MOVI_GRP = environ.get('MOVI_GRP', 'https://t.me/PonnuMovieGroup')
 MOVI_CHNL = environ.get('MOVI_CHNL', 'https://t.me/PonnuMovie')
 PICZ = (environ.get('PICZ', 'https://i.ibb.co/tT15Txc9/IMG-20250930-WA0064.jpg https://i.ibb.co/mVhRWSF0/IMG-20250930-WA0067.jpg https://i.ibb.co/d4bhZ8MR/IMG-20250930-WA0066.jpg https://i.ibb.co/jPqkPHxj/IMG-20250930-WA0065.jpg')).split()
