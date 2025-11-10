@@ -15,6 +15,9 @@ import time
 
 uvloop.install()
 
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+
 class Bot(Client):
     def __init__(self):
         super().__init__(
@@ -22,8 +25,7 @@ class Bot(Client):
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
-            sleep_threshold=5,
-            workers=150,
+            workers=500,
             plugins={"root": "plugins"}
         )
 
